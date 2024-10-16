@@ -36,7 +36,8 @@ const Footer: React.FC = () => {
     }
   });
 
-  const handleSubmit = async (values) => {
+  //TODO: #116 add an interface for the type below
+  const handleSubmit = async (values: { subject: any; name: any; contactInfo: any; details: any; }) => {
     try {
       await emailService.sendEmail({
         subject: values.subject,
